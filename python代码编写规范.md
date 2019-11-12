@@ -53,7 +53,7 @@ def get_radical(Chinses_string)
 * 和普通变量一样： get_name() count_number() ad_stat() 
 
 
-## 字符串链接
+## 四、字符串链接
 ### 避免在循环中用+和+=操作符来累加字符串.
 ```python
 Yes: x = '%s, %s!' % (imperative, expletive)
@@ -66,7 +66,7 @@ No: x = imperative + ', ' + expletive + '!'
       x = 'name: ' + name + '; score: ' + str(n)
 ```
 
-## 四、模型规范
+## 五、模型规范
 
 ### 1. Model 规范
 ```python
