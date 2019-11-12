@@ -2,6 +2,9 @@
 
 
 ##  一、项目组织
+###  创建环境
+* 使用 python virtualenv 创建环境，确定python版本与django版本
+
 
 ### 创建static目录及配置
 * 创建放css, javascript,img的目录  mkdir -p static/css static/js static/img
@@ -26,7 +29,7 @@
 """
 ```
 
-## 二、函数规范
+## 三、函数规范
 
 * Function: 写出该函数的作用，标准为：接受XXX的调用（可有可无，视功能而定），传入XXX参数，返回XXX
 
@@ -54,7 +57,7 @@ def get_radical(Chinses_string)
 ```
 
 
-## 三、变量命名
+## 四、变量命名
 ### 1.模块名： 
 * 小写字母，单词之间用_分割  ad_stats.py 
 * 包名： 和模块名一样 
@@ -69,7 +72,7 @@ def get_radical(Chinses_string)
 * 和普通变量一样： get_name() count_number() ad_stat() 
 
 
-## 四、字符串链接
+## 五、字符串链接
 ### 避免在循环中用+和+=操作符来累加字符串.
 ```python
 Yes: x = '%s, %s!' % (imperative, expletive)
@@ -82,7 +85,7 @@ No: x = imperative + ', ' + expletive + '!'
       x = 'name: ' + name + '; score: ' + str(n)
 ```
 
-## 五、模型规范
+## 六、模型规范
 
 ### 1. Model 规范
 ```python
