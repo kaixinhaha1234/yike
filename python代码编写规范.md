@@ -66,8 +66,9 @@ No: x = imperative + ', ' + expletive + '!'
       x = 'name: ' + name + '; score: ' + str(n)
 ```
 
-## 四、Model 规范
+## 四、模型规范
 
+### 1. Model 规范
 ```python
 
 zhuangtai_CHOICES = (
@@ -77,6 +78,11 @@ zhuangtai_CHOICES = (
 )
 
 class FangWeiXinXi(models.Model):
+    """
+    ###################
+    #  该model负责使用记录发布活动的信息表
+    ###################
+    """
     mingcheng = models.CharField(u'活动名称',max_length=150,unique=True)
     zhuangtai = models.IntegerField(u'状态',choices =zhuangtai_CHOICES, default=0)
     shuliang = models.IntegerField(u'生成数量', default=0)
@@ -95,4 +101,14 @@ class FangWeiXinXi(models.Model):
 
 ```
 
+### 2.admin 规范
+```python
+
+class FangWeiMaAdmin(admin.ModelAdmin):
+    search_fields= ('sn',)
+    list_filter   = ('zhuangtai',)
+    list_display = ('sn', 'num', 'fangweixinxi', 'zhuangtai', 'hits')
+admin.site.register(FangWeiMa,FangWeiMaAdmin)
+
+```
 
