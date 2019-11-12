@@ -1,6 +1,22 @@
 # 亦可技术团队Python代码编写规范 v0.1
 
-##  一、每个文件的文件头、写入作者姓名，文件作用
+
+##  一、项目组织
+
+### 创建static目录及配置
+* 创建放css, javascript,img的目录  mkdir -p static/css static/js static/img
+* 在settings.py中将static绝对路径保存到变量STATICFILES_DIRS中
+* 项目内创建apps 目录，所有开发模块均放入该目录内  
+  
+
+
+
+##  二、基础规范
+  
+### 缩进
+*统一使用4个空格进行缩进
+
+### 每个文件的文件头、写入作者姓名，文件作用
 ```python
 """
 ###################### File Introduction ######################
