@@ -83,13 +83,13 @@ class FangWeiXinXi(models.Model):
     #  该model负责使用记录发布活动的信息表
     ###################
     """
-    mingcheng = models.CharField(u'活动名称',max_length=150,unique=True)
-    zhuangtai = models.IntegerField(u'状态',choices =zhuangtai_CHOICES, default=0)
-    shuliang = models.IntegerField(u'生成数量', default=0)
-    isdo = models.BooleanField(u'是否正在处理',default=False)
-    dodate= models.DateTimeField(u'执行时间',auto_now_add=True,blank=True,null=True)
-    adddate = models.DateTimeField(u'录入时间',auto_now_add=True,blank=True)
-    enddate= models.DateTimeField(u'结束时间',auto_now_add=True,blank=True,null=True)
+    ming_cheng = models.CharField(u'活动名称',max_length=150,unique=True)
+    zhuang_tai = models.IntegerField(u'状态',choices =zhuangtai_CHOICES, default=0)
+    shu_liang = models.IntegerField(u'生成数量', default=0)
+    is_do = models.BooleanField(u'是否正在处理',default=False)
+    do_date= models.DateTimeField(u'执行时间',auto_now_add=True,blank=True,null=True)
+    add_date = models.DateTimeField(u'录入时间',auto_now_add=True,blank=True)
+    end_date= models.DateTimeField(u'结束时间',auto_now_add=True,blank=True,null=True)
 
     def __unicode__(self):
         return self.mingcheng
@@ -106,8 +106,8 @@ class FangWeiXinXi(models.Model):
 
 class FangWeiMaAdmin(admin.ModelAdmin):
     search_fields= ('sn',)
-    list_filter   = ('zhuangtai',)
-    list_display = ('sn', 'num', 'fangweixinxi', 'zhuangtai', 'hits')
+    list_filter   = ('zhuang_tai',)
+    list_display = ('sn', 'num', 'fang_wei_xin_xi', 'zhuang_tai', 'hits')
 admin.site.register(FangWeiMa,FangWeiMaAdmin)
 
 ```
