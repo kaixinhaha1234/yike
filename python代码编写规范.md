@@ -1,6 +1,6 @@
 # 亦可技术团队Python代码编写规范
 
-##  每个文件的文件头、写入作者姓名，文件作用
+##  一、每个文件的文件头、写入作者姓名，文件作用
 ```python
 """
 ###################### File Introduction ######################
@@ -10,7 +10,7 @@
 """
 ```
 
-## 函数规范
+## 二、函数规范
 
 * Function: 写出该函数的作用，标准为：接受XXX的调用（可有可无，视功能而定），传入XXX参数，返回XXX
 
@@ -38,8 +38,8 @@ def get_radical(Chinses_string)
 ```
 
 
-## 变量命名
-### 模块名： 
+## 三、变量命名
+### 1.模块名： 
 * 小写字母，单词之间用_分割  ad_stats.py 
 * 包名： 和模块名一样 
 * 类名： 单词首字母大写 AdStats  ConfigUtil 
@@ -49,7 +49,7 @@ def get_radical(Chinses_string)
 * 私有实例变量（外部访问会报错）：  以__开头（2个下划线），其他和普通变量一样  __private_var 
 * 专有变量： __开头，__结尾，一般为python的自有变量，不要以这种方式命名 __doc__  __class__ 
 
-### 普通函数： 
+### 2.普通函数： 
 * 和普通变量一样： get_name() count_number() ad_stat() 
 
 
@@ -66,7 +66,7 @@ No: x = imperative + ', ' + expletive + '!'
       x = 'name: ' + name + '; score: ' + str(n)
 ```
 
-## Model 规范
+## 四、Model 规范
 
 ```python
 
